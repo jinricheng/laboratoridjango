@@ -1,4 +1,6 @@
 # Django settings for sobres project.
+import os.path
+
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -108,6 +110,8 @@ ROOT_URLCONF = 'sobres.urls'
 WSGI_APPLICATION = 'sobres.wsgi.application'
 
 TEMPLATE_DIRS = (
+
+    os.path.join(os.path.dirname(__file__),'../isobres/template')
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
